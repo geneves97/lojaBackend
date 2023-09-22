@@ -6,6 +6,12 @@ public class ProductEntity {
     public double price;
     public int quantity;
 
+    public ProductEntity(String name, double price, int quantity){
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
     public double totalValueInStock(){
         return price * quantity;
     }

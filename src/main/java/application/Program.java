@@ -16,17 +16,18 @@ public class Program
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner((System.in));
 
-        ProductEntity productEntity = new ProductEntity();
         System.out.println("Enter product data: ");
 
         System.out.print("Name: ");
-        productEntity.name = sc.nextLine();
+        String name = sc.nextLine();
 
         System.out.print("Price: ");
-        productEntity.price = sc.nextDouble();
+        double price = sc.nextDouble();
 
         System.out.print("Quantity in stock: ");
-        productEntity.quantity = sc.nextInt();
+        int quantity = sc.nextInt();
+
+        ProductEntity productEntity = new ProductEntity(name, price, quantity);
 
         System.out.println();
         System.out.println("Producrt data: " + productEntity);
@@ -34,7 +35,7 @@ public class Program
         System.out.println();
         System.out.println("Enter the number of products to be addeded to stock: ");
 
-        int quantity = sc.nextInt();
+        quantity = sc.nextInt();
         productEntity.addProducts(quantity);
 
         System.out.println();
