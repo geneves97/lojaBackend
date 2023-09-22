@@ -19,6 +19,12 @@ public class Program
         double price = sc.nextDouble();
         ProductEntity productEntity = new ProductEntity(name, price);
 
+        productEntity.setName("Computer");
+        System.out.println("Updated name: " + productEntity.getName());
+        productEntity.setPrice(900);
+        System.out.println("Updated price: " + productEntity.getPrice());
+        System.out.println("Quantity: " + productEntity.getQuantity());
+
         System.out.println();
         System.out.println("Producrt data: " + productEntity);
         System.out.println();
